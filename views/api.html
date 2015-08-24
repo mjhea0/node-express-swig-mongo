@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+  <div class="container">
+
+    <h1>{{ title }}</h1>
+
+    <br>
+
+    <form method="post" action="/api/opinions" class="form-inline">
+      <div class="form-group">
+        <label>Got something to say:</label>
+        <input type="text" name="opinion" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-default">Save</button>
+    </form>
+
+    <hr><br>
+
+    <h2>All Opinions</h2>
+
+    <ul>
+    {% for opinion in opinions %}
+      <li>{{opinion.title}}</li>
+    {% endfor %}
+    </ul>
+
+  </div>
+
+{% endblock %}
+
+
