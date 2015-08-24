@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 var Schema   = mongoose.Schema;
 
-var Opinion = new Schema({
-    title : String,
-});
+var Superhero = new Schema(
+  {name : String}
+);
 
-mongoose.model('opinions', Opinion);
+mongoose.model('superheros', Superhero);
 
-mongoose.connect('mongodb://localhost/node-opinion');
+mongoose.connect('mongodb://localhost/node-superhero');
